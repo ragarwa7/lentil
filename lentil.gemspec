@@ -20,20 +20,20 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib,vendor}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = `git ls-files -- test/*`.split("\n")
 
-  s.add_dependency "rails", "~> 4.2.3"
-  s.add_dependency 'jquery-rails', '~> 4.2'
-  s.add_dependency 'jquery-ui-rails', '~> 5.0'
-  s.add_dependency "activeadmin", '~> 1.0.0.pre4'
-  s.add_dependency 'devise', "~> 3.5.9"
+  s.add_dependency "rails", "~> 5.1.4"
+  s.add_dependency 'jquery-rails', '~> 4.3.1'
+  s.add_dependency 'jquery-ui-rails', '~> 6.0.1'
+  s.add_dependency "activeadmin", '~> 1.1.0'
+  s.add_dependency 'devise', "~> 4.3.0"
   s.add_dependency "formtastic", '~> 3.1.0' # simplifies form creation
   s.add_dependency "instagram", "~> 1.1.2" # Interact with the Instagram API
   s.add_dependency "hashie", "~> 3.4.1" # Updated Hashie gem for Instagram
   s.add_dependency "modernizr-rails", "~> 2.7.0" # browser feature detection, used by breakpoint
-  s.add_dependency 'fancybox2-rails', '~> 0.2.8' # for image interface overlays
+  s.add_dependency 'fancybox2-rails', '~> 0.2.7' # for image interface overlays
   s.add_dependency 'whenever', '>=0.8.0' # for defining cron jobs
   s.add_dependency 'bootstrap-sass', '~> 2.3.0' # sass version of twitter bootstrap
   s.add_dependency 'will_paginate', '~> 3.1.0' # adds paging feature to rails models
-  s.add_dependency 'state_machines-activerecord', "~> 0.4.0" # adds state machine for moderation
+  s.add_dependency 'state_machines-activerecord', '~> 0.5.0'# adds state machine for moderation
   s.add_dependency 'ruby-oembed', "~> 0.10.1" # Retrieve OEmbed data
   s.add_dependency 'select2-rails', "~> 4.0.0" # improved form select box
   s.add_dependency 'compass-rails', "~> 3.0.2"
@@ -48,14 +48,14 @@ Gem::Specification.new do |s|
   s.add_dependency 'emojimmy', '~> 0.3.0' # Alternative JSON library
 
   s.add_development_dependency "sqlite3", "~> 1.3.8"
-  s.add_development_dependency "capybara", "~> 2.10.1"
+  s.add_development_dependency "capybara", "~> 2.15.4"
   s.add_development_dependency "database_cleaner", "~> 1.5.1"
   s.add_development_dependency "launchy", "~> 2.4.0"
   s.add_development_dependency "vcr", "~> 3.0.1"
   s.add_development_dependency "webmock", "~> 2.1.0"
   s.add_development_dependency "simplecov", "~> 0.12.0"
   s.add_development_dependency "pry-rails", "~> 0.3.2"
-  s.add_development_dependency "mocha", "~> 1.2.1"
+  s.add_development_dependency "mocha", "~> 1.3.0"
   s.add_development_dependency "single_test", "~> 0.6.0"
   s.add_development_dependency "poltergeist", "~> 1.12"
   s.add_development_dependency "yard", "~> 0.9.5"
