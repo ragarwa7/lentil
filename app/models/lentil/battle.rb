@@ -9,7 +9,7 @@
 #  updated_at :datetime         not null
 #
 
-class Lentil::Battle < ActiveRecord::Base
+class Lentil::Battle < ApplicationRecord
   belongs_to :image, :counter_cache => :wins_count, :autosave => true
   belongs_to :loser, :class_name => "Image", :counter_cache => :losses_count, :autosave => true
 

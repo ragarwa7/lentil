@@ -14,6 +14,7 @@ end
 
 group :tools do
   gem 'guard-test'
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
 end
 
 gem 'minitest-rails-capybara'

@@ -8,7 +8,7 @@
 #  updated_at :datetime         not null
 #
 
-class Lentil::Tag < ActiveRecord::Base
+class Lentil::Tag < ApplicationRecord
   stores_emoji_characters :name
 
   has_many :tagset_assignments

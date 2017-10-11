@@ -13,7 +13,7 @@
 #  images_count :integer          default(0)
 #
 
-class Lentil::User < ActiveRecord::Base
+class Lentil::User < ApplicationRecord
   stores_emoji_characters :full_name, :bio
 
   has_many :images

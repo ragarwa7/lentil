@@ -9,7 +9,7 @@
 #  updated_at :datetime         not null
 #
 
-class Lentil::TagsetAssignment < ActiveRecord::Base
+class Lentil::TagsetAssignment < ApplicationRecord
   belongs_to :tag
   belongs_to :tagset
 end

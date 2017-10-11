@@ -10,7 +10,7 @@
 #  harvest     :boolean          default(FALSE)
 #
 
-class Lentil::Tagset < ActiveRecord::Base
+class Lentil::Tagset < ApplicationRecord
 
   has_many :tagset_assignments, :dependent => :destroy
   has_many :tags, :through => :tagset_assignments

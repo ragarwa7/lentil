@@ -10,7 +10,7 @@
 #  staff_tag  :boolean          default(FALSE)
 #
 
-class Lentil::Tagging < ActiveRecord::Base
+class Lentil::Tagging < ApplicationRecord
   belongs_to :image
   belongs_to :tag
 

@@ -9,7 +9,7 @@
 #  updated_at :datetime         not null
 #
 
-class Lentil::Licensing < ActiveRecord::Base
+class Lentil::Licensing < ApplicationRecord
   belongs_to :image
   belongs_to :license
 end

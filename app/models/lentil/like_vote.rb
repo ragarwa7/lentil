@@ -8,6 +8,6 @@
 #  updated_at :datetime         not null
 #
 
-class Lentil::LikeVote < ActiveRecord::Base
+class Lentil::LikeVote < ApplicationRecord
   belongs_to :image, counter_cache: true
 end

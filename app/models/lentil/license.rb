@@ -11,7 +11,7 @@
 #  short_name  :string(255)
 #
 
-class Lentil::License < ActiveRecord::Base
+class Lentil::License < ApplicationRecord
   has_many :licensings
   has_many :images, :through=>:licensings
 

@@ -8,6 +8,6 @@
 #  updated_at :datetime         not null
 #
 
-class Lentil::Flag < ActiveRecord::Base
+class Lentil::Flag < ApplicationRecord
   belongs_to :image
 end

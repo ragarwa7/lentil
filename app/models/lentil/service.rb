@@ -9,7 +9,7 @@
 #  updated_at :datetime         not null
 #
 
-class Lentil::Service < ActiveRecord::Base
+class Lentil::Service < ApplicationRecord
   has_many :users
   has_many :images, :through => :users
 end

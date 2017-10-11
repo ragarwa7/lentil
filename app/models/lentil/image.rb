@@ -32,7 +32,7 @@
 #  do_not_request_donation        :boolean
 #
 
-class Lentil::Image < ActiveRecord::Base
+class Lentil::Image < ApplicationRecord
   stores_emoji_characters :description
 
   has_many :won_battles, :class_name => "Battle"
