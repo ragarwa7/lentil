@@ -1,4 +1,4 @@
-class CreateLicensings < ActiveRecord::Migration
+class CreateLicensings < ActiveRecord::Migration[4.2]
   def change
     create_table :licensings do |t|
       t.references :image

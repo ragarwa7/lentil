@@ -1,4 +1,4 @@
-class RemoveTitleFromImages < ActiveRecord::Migration
+class RemoveTitleFromImages < ActiveRecord::Migration[4.2]
   def up
     remove_column :images, :title
   end

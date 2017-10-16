@@ -1,4 +1,4 @@
-class AddImagesCountToUsers < ActiveRecord::Migration
+class AddImagesCountToUsers < ActiveRecord::Migration[4.2]
    def self.up
     add_column :users, :images_count, :integer, :default => 0
 

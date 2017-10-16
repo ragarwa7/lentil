@@ -1,4 +1,4 @@
-class CreateLikeVotes < ActiveRecord::Migration
+class CreateLikeVotes < ActiveRecord::Migration[4.2]
   def change
     create_table :like_votes do |t|
       t.references :image

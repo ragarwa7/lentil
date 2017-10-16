@@ -1,4 +1,4 @@
-class AddFailedFileChecksToImages < ActiveRecord::Migration
+class AddFailedFileChecksToImages < ActiveRecord::Migration[4.2]
   def change
     add_column :images, :failed_file_checks, :integer, :default => 0
     add_column :images, :file_last_checked, :datetime

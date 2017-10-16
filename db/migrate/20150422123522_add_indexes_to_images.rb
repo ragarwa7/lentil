@@ -1,4 +1,4 @@
-class AddIndexesToImages < ActiveRecord::Migration
+class AddIndexesToImages < ActiveRecord::Migration[4.2]
   def change
     add_index :lentil_images, :user_id
     add_index :lentil_images, :state

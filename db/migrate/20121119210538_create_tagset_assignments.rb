@@ -1,4 +1,4 @@
-class CreateTagsetAssignments < ActiveRecord::Migration
+class CreateTagsetAssignments < ActiveRecord::Migration[4.2]
   def change
     create_table :tagset_assignments do |t|
       t.references :tag

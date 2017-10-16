@@ -1,4 +1,4 @@
-class NamespaceTables < ActiveRecord::Migration
+class NamespaceTables < ActiveRecord::Migration[4.2]
   def change
     rename_table :admin_users, :lentil_admin_users
     rename_table :battles, :lentil_battles

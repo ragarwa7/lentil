@@ -1,4 +1,4 @@
-class CreateBattles < ActiveRecord::Migration
+class CreateBattles < ActiveRecord::Migration[4.2]
   def change
     create_table :battles do |t|
       t.integer :image_id

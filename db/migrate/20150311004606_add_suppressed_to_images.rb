@@ -1,4 +1,4 @@
-class AddSuppressedToImages < ActiveRecord::Migration
+class AddSuppressedToImages < ActiveRecord::Migration[4.2]
   def change
     add_column :lentil_images, :suppressed, :boolean, :default => false
   end
