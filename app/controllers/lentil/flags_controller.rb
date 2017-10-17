@@ -7,7 +7,7 @@ module Lentil
         session[:flagged_images] ||= []
         session[:flagged_images] << params[:image_id]
       end
-      redirect_to :back
+      redirect_back(fallback_location: main_app.root_path)
     end
   end
 end

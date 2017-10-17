@@ -7,7 +7,7 @@ module Lentil
         session[:liked_images] ||= []
         session[:liked_images] << params[:image_id]
       end
-      redirect_to :back
+      redirect_back(fallback_location: main_app.root_path)
     end
   end
 end

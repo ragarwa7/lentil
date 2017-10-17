@@ -110,7 +110,7 @@ module Lentil
           else
             session[:prev_images] = submitted_ids
             session[:prev_winner] = winner_id
-            redirect_to :back
+            redirect_back(fallback_location: main_app.root_path)
           end
         end
       end
