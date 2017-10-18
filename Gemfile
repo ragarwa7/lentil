@@ -14,14 +14,15 @@ end
 
 group :tools do
   gem 'guard-test'
-  gem 'phantomjs', :require => 'phantomjs/poltergeist'
 end
 
 gem 'minitest-rails-capybara'
 
 group :test do
   gem 'mysql2', '~> 0.4.4'
-  gem 'pg'
+  gem 'rspec-rails', '~> 3.5.0.beta'
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
+  gem 'rails-controller-testing'
   gem 'therubyracer'
 end
 
