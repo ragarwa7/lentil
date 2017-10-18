@@ -14,7 +14,7 @@ class AdminTagsetsControllerTest < ActionController::TestCase
   end
 
   test "should get to tagset show" do
-    get :show, :id => lentil_tagsets(:one)
+    process :show, method: :get, params: { :id => lentil_tagsets(:one)}
     assert_response :success
   end
 
