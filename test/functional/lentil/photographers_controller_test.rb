@@ -11,7 +11,7 @@ class Lentil::PhotographersControllerTest < ActionController::TestCase
   end
 
   test "should get show view" do
-    get :show, :id => lentil_users(:bd).id
+    process :show, method: :get, params: {:id => lentil_users(:bd).id }
     assert_response :success
   end
 

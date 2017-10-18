@@ -12,7 +12,7 @@ class Lentil::ImagesControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    get :show, :id => lentil_images(:one).id
+    process :show, method: :get, params: { :id => lentil_images(:one).id }
     assert_response :success
   end
 

@@ -14,7 +14,7 @@ class AdminImagesControllerTest < ActionController::TestCase
   end
 
   test "should get show view" do
-    get :show, {:id => lentil_images(:one).id} #admin_lentil_image_path(lentil_images(:one)), :use_route => :lentil
+    process :show, method: :get, params: {:id => lentil_images(:one).id} #admin_lentil_image_path(lentil_images(:one)), :use_route => :lentil
     assert_response :success
   end
 

@@ -8,12 +8,12 @@ class Lentil::LikeVotesControllerTest < ActionController::TestCase
   end
 
   test "should post tally" do
-    post :tally, :image_id => lentil_images(:one).id
+    process :tally, method: :post, params: {  :image_id => lentil_images(:one).id }
     assert_response 302
   end
 
   test "should save image id in session when posting a tally" do
-    post :tally, :image_id => lentil_images(:one).id
+    process :tally, method: :post, params: {  :image_id => lentil_images(:one).id }
     assert session["liked_images"].include?(lentil_images(:one).id.to_s)
   end
 
