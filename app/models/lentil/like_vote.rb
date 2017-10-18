@@ -9,5 +9,5 @@
 #
 
 class Lentil::LikeVote < ApplicationRecord
-  belongs_to :image, counter_cache: true
+  belongs_to :image, counter_cache: true, optional: true
 end

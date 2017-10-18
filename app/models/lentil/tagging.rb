@@ -11,8 +11,8 @@
 #
 
 class Lentil::Tagging < ApplicationRecord
-  belongs_to :image
-  belongs_to :tag
+  belongs_to :image, optional: true
+  belongs_to :tag, optional: true
 
   validates :image_id, :uniqueness => {:scope => :tag_id}
 end

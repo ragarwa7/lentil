@@ -10,6 +10,6 @@
 #
 
 class Lentil::Licensing < ApplicationRecord
-  belongs_to :image
-  belongs_to :license
+  belongs_to :image, optional: true
+  belongs_to :license, optional: true
 end

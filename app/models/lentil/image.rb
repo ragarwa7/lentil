@@ -43,7 +43,7 @@ class Lentil::Image < ApplicationRecord
   has_many :like_votes
   has_many :flags
 
-  belongs_to :user, counter_cache: true
+  belongs_to :user, counter_cache: true, optional: true
   has_one :service, :through => :user
 
   has_many :taggings
@@ -52,7 +52,7 @@ class Lentil::Image < ApplicationRecord
   has_many :licensings
   has_many :licenses, :through=>:licensings
 
-  belongs_to :moderator, :class_name => Lentil::AdminUser
+  belongs_to :moderator, :class_name => Lentil::AdminUser, optional: true
 
   default_scope { where("failed_file_checks < 3") }
 

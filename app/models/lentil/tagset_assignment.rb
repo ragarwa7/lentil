@@ -10,6 +10,6 @@
 #
 
 class Lentil::TagsetAssignment < ApplicationRecord
-  belongs_to :tag
-  belongs_to :tagset
+  belongs_to :tag, optional: true
+  belongs_to :tagset, optional: true
 end

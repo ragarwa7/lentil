@@ -10,8 +10,8 @@
 #
 
 class Lentil::Battle < ApplicationRecord
-  belongs_to :image, :counter_cache => :wins_count, :autosave => true
-  belongs_to :loser, :class_name => "Image", :counter_cache => :losses_count, :autosave => true
+  belongs_to :image, :counter_cache => :wins_count, :autosave => true, optional: true
+  belongs_to :loser, :class_name => "Image", :counter_cache => :losses_count, :autosave => true, optional: true
 
   after_commit :update_win_pct
 

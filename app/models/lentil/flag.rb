@@ -9,5 +9,5 @@
 #
 
 class Lentil::Flag < ApplicationRecord
-  belongs_to :image
+  belongs_to :image, optional: true
 end

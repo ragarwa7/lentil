@@ -17,7 +17,7 @@ class Lentil::User < ApplicationRecord
   stores_emoji_characters :full_name, :bio
 
   has_many :images
-  belongs_to :service
+  belongs_to :service, optional: true
 
   validates_uniqueness_of :user_name, :scope => :service_id
 
