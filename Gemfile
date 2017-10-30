@@ -21,7 +21,6 @@ gem 'minitest-rails-capybara'
 group :test do
   gem 'mysql2', '~> 0.4.4'
   gem 'rspec-rails', '~> 3.5.0.beta'
-  gem 'phantomjs', :require => 'phantomjs/poltergeist'
   gem 'rails-controller-testing'
   gem 'therubyracer'
 end
