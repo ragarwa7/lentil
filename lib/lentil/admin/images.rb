@@ -193,7 +193,7 @@ if defined?(ActiveAdmin)
       end
         end
       end
-      active_admin_comments
+      #active_admin_comments
     end
 
     controller do
@@ -258,9 +258,9 @@ if defined?(ActiveAdmin)
         end
 
         if errors.length > 0
-          redirect_to :back, notice: "#{image_counter} #{'Image'.pluralize(image_counter)} moderated (out of #{total_images})", alert: errors.join('<br>').html_safe
+          redirect_back fallback_location: main_app.root_path, notice: "#{image_counter} #{'Image'.pluralize(image_counter)} moderated (out of #{total_images})", alert: errors.join('<br>').html_safe
         else
-          redirect_to :back, notice: "#{image_counter} #{'Image'.pluralize(image_counter)} moderated (out of #{total_images})"
+          redirect_back fallback_location: main_app.root_path, notice: "#{image_counter} #{'Image'.pluralize(image_counter)} moderated (out of #{total_images})"
         end
       end
     end
@@ -304,7 +304,7 @@ if defined?(ActiveAdmin)
     collection_action :moderate_flagged do
       @harvestable_tag_ids = Lentil::Tag.harvestable.map(&:id)
       @second_moderation = true
-      temp_images = Lentil::Image.includes(:user, :tags, :taggings, :flags).joins(:flags).where(:second_moderation => false).uniq.all
+      temp_images = Lentil::Image.includes(:user, :tags, :taggings, :flags).joins(:flags).where(:second_moderation => false).all.uniq
       @images = Kaminari.paginate_array(temp_images).page(params[:page]).per(10)
       render "/admin/lentil_images/moderate"
     end
@@ -318,7 +318,7 @@ if defined?(ActiveAdmin)
 
     collection_action :flagging_history do
       @harvestable_tag_ids = Lentil::Tag.harvestable.map(&:id)
-      temp_images = Lentil::Image.includes(:user, :tags, :flags, :moderator).joins(:flags).uniq.all
+      temp_images = Lentil::Image.includes(:user, :tags, :flags, :moderator).joins(:flags).all.uniq
       @images = Kaminari.paginate_array(temp_images).page(params[:page]).per(10)
     end
 
@@ -354,7 +354,7 @@ if defined?(ActiveAdmin)
         end
       end
 
-      redirect_to :back, notice: "#{image_counter} #{'URL'.pluralize(image_counter)} added (out of #{total_urls})", alert: errors.join('<br>').html_safe
+      redirect_back fallback_location: main_app.root_path, notice: "#{image_counter} #{'URL'.pluralize(image_counter)} added (out of #{total_urls})", alert: errors.join('<br>').html_safe
     end
   end
 end

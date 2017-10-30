@@ -41,7 +41,7 @@ class ActionDispatch::IntegrationTest
   include Capybara::DSL
 
   # Stop ActiveRecord from wrapping tests in transactions
-  self.use_transactional_fixtures = false
+  self.use_transactional_tests = false
 
   def setup
     Capybara.register_driver :poltergeist_with_logger do |app|

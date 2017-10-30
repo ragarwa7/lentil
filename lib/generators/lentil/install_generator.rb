@@ -24,11 +24,13 @@ module Lentil
         gsub_file "Gemfile", /^.*ruby-prof.*$/, ""
         gsub_file "Gemfile", /^.*ruby-prof.*$/, ""
       end
-
+#config.active_record.raise_in_transactional_callbacks deprecated from rails 5.1
+=begin
       desc "Enable raise_in_transactions_callbacks"
       def enable_raise_trans_cb
         insert_into_file "config/application.rb", "    config.active_record.raise_in_transactional_callbacks = true", :after => "# Inserted by lentil\n"
       end
+=end
 
       desc "Randomize tests"
       def randomize_tests

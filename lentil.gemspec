@@ -27,14 +27,14 @@ Gem::Specification.new do |s|
   s.add_dependency 'devise', "~> 4.3.0"
   s.add_dependency "formtastic", '~> 3.1.0' # simplifies form creation
   s.add_dependency "instagram", "~> 1.1.6" # Interact with the Instagram API
-  s.add_dependency "hashie", "~> 3.4.1" # Updated Hashie gem for Instagram
+  s.add_dependency "hashie", "~> 3.5.6" # Updated Hashie gem for Instagram
   s.add_dependency "modernizr-rails", "~> 2.7.0" # browser feature detection, used by breakpoint
   s.add_dependency 'fancybox2-rails', '~> 0.2.7' # for image interface overlays
   s.add_dependency 'whenever', '>=0.8.0' # for defining cron jobs
   s.add_dependency 'bootstrap-sass', '~> 2.3.0' # sass version of twitter bootstrap
   s.add_dependency 'will_paginate', '~> 3.1.6' # adds paging feature to rails models
   s.add_dependency 'state_machines-activerecord', '~> 0.5.0'# adds state machine for moderation
-  s.add_dependency 'ruby-oembed', "~> 0.10.1" # Retrieve OEmbed data
+  s.add_dependency 'ruby-oembed', "~> 0.12.0" # Retrieve OEmbed data
   s.add_dependency 'select2-rails', "~> 4.0.0" # improved form select box
   s.add_dependency 'compass-rails', "~> 3.0.2"
   s.add_dependency 'randumb', "~> 0.5.0" # pull random records from Active Record
@@ -59,5 +59,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "single_test", "~> 0.6.0"
   s.add_development_dependency "poltergeist", "~> 1.12"
   s.add_development_dependency "yard", "~> 0.9.5"
-  s.add_development_dependency "responders", "~> 2.4.0"
+  s.add_development_dependency "responders", "~> 2.0"
 end

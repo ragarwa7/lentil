@@ -64,7 +64,7 @@ module Lentil
 
       submitted_ids = []
       params['image'].each do |image|
-        submitted_ids << image[0].to_i
+        submitted_ids << image.to_i
       end
 
       winner_id = params['vote'].to_i
