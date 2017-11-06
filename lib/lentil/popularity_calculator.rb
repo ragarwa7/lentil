@@ -43,20 +43,26 @@ module Lentil
     # @return [boolean] success/failure of update
     def update_image_popularity_score(image_to_update = :all)
 
-      def get_score_write_to_db(image)
+      #[boolean] success/failure of update
+      updated_popularity_score = Array.new
+
+      get_score_write_to_db = ->(image){
         popularity_score = calculate_popularity(image)
         image.update_attribute(:popular_score, popularity_score)
-      end
+        updated_popularity_score.push(popularity_score) unless image.previous_changes[:popular_score].nil?
+      }
 
       if image_to_update == :all
-        images = Lentil::Image.find(image_to_update)
-        images.each  do |image|
-          get_score_write_to_db(image)
+        Lentil::Image.find_each  do |image|
+          get_score_write_to_db.call(image)
         end
       elsif image_to_update.kind_of?(Integer)
           image = Lentil::Image.find(image_to_update)
-          get_score_write_to_db(image)
+          get_score_write_to_db.call(image)
       end
+
+      updated_popularity_score
+
     end
 
   end
