@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 5.1.4"
   s.add_dependency 'jquery-rails', '~> 4.3.1'
   s.add_dependency 'jquery-ui-rails', '~> 6.0.1'
-  s.add_dependency "activeadmin", '~> 1.1.0'
+  s.add_dependency "activeadmin", '~> 1.0.0'
   s.add_dependency 'devise', "~> 4.3.0"
   s.add_dependency "formtastic", '~> 3.1.0' # simplifies form creation
   s.add_dependency "instagram", "~> 1.1.6" # Interact with the Instagram API
