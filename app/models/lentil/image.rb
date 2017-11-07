@@ -41,7 +41,7 @@ class Lentil::Image < ApplicationRecord
   has_many :winners, :through => :lost_battles, :source => :image
 
   has_many :like_votes
-  has_many :flags
+  has_many :flags, dependent: :destroy
 
   belongs_to :user, counter_cache: true, optional: true
   has_one :service, :through => :user

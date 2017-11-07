@@ -7,4 +7,10 @@ namespace :lentil do
     end
   end
 
+  desc 'clear orphaned flag records'
+  task :clear_orphaned_flags => :environment do
+    deleted_flags = Lentil::Flag.where("image_id NOT IN (?)", Lentil::Image.pluck("id")).destroy_all
+    puts "#{deleted_flags.length} orphaned flagged records deleted"
+  end
+
 end
