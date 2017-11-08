@@ -60,9 +60,13 @@
         target = document.getElementById('spinner-overlay');
         BATTLE_SPINNER = new Spinner(opts).spin(target);
 
-    }).on('ajax:success', function (evt, data, status, xhr) {
+    }).on('ajax:success', function (event) {
+
+        //rails-ujs changes for rails 5.1
+        var data = event.detail[0], status = event.detail[1], xhr = event.detail[2];
+
         // Insert new images into hidden div
-        $('.battle-inner:eq(1)').replaceWith(data);
+        $('.battle-inner:eq(1)').replaceWith(xhr.responseText);
 
         $('.battle-inner:eq(1)').imagesLoaded()
             .done(function () {
@@ -90,10 +94,12 @@
                 BATTLE_SPINNER.stop();
             })
 
-    }).on('ajax:error', function (evt, xhr, status) {
+    }).on('ajax:error', function (event) {
         var error,
             errors,
             ajaxError;
+
+        var data = event.detail[0], status = event.detail[1], xhr = event.detail[2];
 
         // Hide Spinner
         $('#spinner-overlay').hide();
