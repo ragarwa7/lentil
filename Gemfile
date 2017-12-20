@@ -20,6 +20,7 @@ gem 'minitest-rails-capybara'
 
 group :test do
   gem 'mysql2', '~> 0.4.4'
+  gem 'pg'
   gem 'rspec-rails', '~> 3.5.0.beta'
   gem 'rails-controller-testing'
   gem 'therubyracer'
